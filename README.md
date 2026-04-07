@@ -5,7 +5,7 @@ This project allows users to upload a CSV file and ask business-related question
 
 ## 🎥 Demo
 
-![Demo](Video Project.gif)
+![Demo](demo.gif)
 
 ## 🚀 Live Demo
 
