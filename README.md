@@ -5,11 +5,11 @@ This project allows users to upload a CSV file and ask business-related question
 
 ## Features
 
-- Upload CSV sales data
-- Ask questions in natural language-like format
-- Get quick analytical answers
-- View the uploaded dataset directly in the app
-
+ - Support more flexible user questions
+- Add charts and visualizations
+- Improve question understanding with LLM integration
+- Deploy the project publicly with Streamlit Cloud
+- 
 ## Example Questions
 
 - Ortalama satış nedir?
@@ -57,4 +57,4 @@ Improve question understanding with LLM integration
 Deploy the project publicly with Streamlit Cloud
 Author
 
-Beyza Uzun
+👩‍💻 Developed by **Beyza Uzun** 
