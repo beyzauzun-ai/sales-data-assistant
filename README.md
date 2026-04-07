@@ -5,10 +5,10 @@ This project allows users to upload a CSV file and ask business-related question
 
 ## Features
 
- - Support more flexible user questions
-- Add charts and visualizations
-- Improve question understanding with LLM integration
-- Deploy the project publicly with Streamlit Cloud
+- Upload CSV sales data
+- Ask questions in natural language-like format
+- Get quick analytical answers
+- View the uploaded dataset directly in the app
   
 ## Example Questions
 
@@ -50,11 +50,13 @@ streamlit run app.py
 This project was built as a hands-on beginner/intermediate data analysis and AI-style application.
 It demonstrates how Python and Pandas can be combined with Streamlit to create an interactive business-focused data assistant.
 
-Future Improvements
-Support more flexible user questions
-Add charts and visualizations
-Improve question understanding with LLM integration
-Deploy the project publicly with Streamlit Cloud
+## Future Improvements
+
+- Support more flexible user questions  
+- Add charts and visualizations  
+- Improve question understanding with LLM integration  
+- Deploy the project publicly with Streamlit Cloud
+  
 Author
 
 👩‍💻 Developed by **Beyza Uzun** 
