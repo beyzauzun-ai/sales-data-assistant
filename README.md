@@ -27,14 +27,14 @@ This project allows users to upload a CSV file and ask business-related question
 - Streamlit
 
 ## Project Structure
-
+```text
 sales-data-assistant/
 │
 ├── app.py
 ├── data.csv
 ├── requirements.txt
 └── README.md
-
+```
 ## How to Run
 1. Clone the repository:
 git clone https://github.com/beyzauzun-ai/sales-data-assistant.git
