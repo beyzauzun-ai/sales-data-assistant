@@ -3,6 +3,10 @@
 A simple sales data analysis application built with **Python, Pandas, and Streamlit**.  
 This project allows users to upload a CSV file and ask business-related questions about sales performance.
 
+## 🎥 Demo
+
+![Demo](Video Project.gif)
+
 ## 🚀 Live Demo
 
 🔗 **Try the app here:**  
