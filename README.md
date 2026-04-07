@@ -9,7 +9,7 @@ Users can upload CSV files and ask business questions in natural language.
 https://beyza-sales-assistant.streamlit.app
 
 ## 🎥 Demo
-img src="Video Project.gif" width="900">
+img src="demo.gif" width="900">
 
 ## Features
 
