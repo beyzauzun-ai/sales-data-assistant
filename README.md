@@ -34,6 +34,7 @@ sales-data-assistant/
 ├── data.csv
 ├── requirements.txt
 └── README.md
+
 ## How to Run
 Clone the repository:
 git clone https://github.com/beyzauzun-ai/sales-data-assistant.git
