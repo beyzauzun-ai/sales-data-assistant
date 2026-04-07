@@ -9,7 +9,7 @@ This project allows users to upload a CSV file and ask business-related question
 - Add charts and visualizations
 - Improve question understanding with LLM integration
 - Deploy the project publicly with Streamlit Cloud
-- 
+  
 ## Example Questions
 
 - Ortalama satış nedir?
