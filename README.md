@@ -3,6 +3,11 @@
 A simple sales data analysis application built with **Python, Pandas, and Streamlit**.  
 This project allows users to upload a CSV file and ask business-related questions about sales performance.
 
+## 🚀 Live Demo
+
+🔗 **Try the app here:**  
+https://beyza-sales-assistant.streamlit.app
+
 ## Features
 
 - Upload CSV sales data
