@@ -36,14 +36,15 @@ sales-data-assistant/
 └── README.md
 
 ## How to Run
-Clone the repository:
+1. Clone the repository:
 git clone https://github.com/beyzauzun-ai/sales-data-assistant.git
-Go to the project folder:
+2. Go to the project folder:
 cd sales-data-assistant
-Install dependencies:
+3. Install dependencies:
 pip install -r requirements.txt
-Run the app:
+4. Run the app:
 streamlit run app.py
+
 ## Project Purpose
 
 This project was built as a hands-on beginner/intermediate data analysis and AI-style application.
