@@ -106,20 +106,21 @@ if uploaded_file is not None:
     value=st.session_state.get("user_input", ""),
     key="user_input_field"
 )
-    if st.button("Cevapla"):
-        if question.strip():
-            result = answer_question(df, question)
-            st.markdown("----")
-            st.markdown("### 📊 Sonuç")
-            if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
-                st.markdown("### 📈 Satış Trendi")
-                st.line_chart(result)
-            if isinstance(result, (pd.Series, pd.DataFrame)):
-                st.dataframe(result)
-            else:
-                st.success(result)
+    
+if st.button("Cevapla"):
+    if question.strip():
+        result = answer_question(df, question)
+        st.markdown("----")
+        st.markdown("### 📊 Sonuç")
+        if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+            st.markdown("### 📈 Satış Trendi")
+            st.line_chart(result)
+        if isinstance(result, (pd.Series, pd.DataFrame)):
+            st.dataframe(result)
         else:
-            st.warning("Lütfen bir soru yaz.")
+            st.success(result)
+else:
+    st.warning("Lütfen bir soru yaz.")
         
 #  Auto ask (butonsuz cevap)
 
