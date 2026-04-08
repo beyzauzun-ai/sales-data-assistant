@@ -109,6 +109,7 @@ if uploaded_file is not None:
     if st.button("Cevapla"):
         if question.strip():
             result = answer_question(df, question)
+            st.markdown("----")
             st.markdown("### 📊 Sonuç")
 
             if isinstance(result, pd.Series) or isinstance(result, pd.DataFrame):
@@ -121,9 +122,10 @@ if uploaded_file is not None:
 #  Auto ask (butonsuz cevap)
 if st.session_state.get("auto_ask"):
     result = answer_question(df, st.session_state["user_input"])
+    st.markdown("----")
     st.markdown("### 📊 Sonuç")
 
-    if isinstance(result, pd.Series) or isinstance(result, pd.DataFrame):
+    if isinstance(result, (pd.Series, pd.DataFrame)):
         st.dataframe(result)
     else:
         st.success(result)
