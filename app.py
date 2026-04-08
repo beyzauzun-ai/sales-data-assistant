@@ -4,6 +4,32 @@ import pandas as pd
 if "user_input" not in st.session_state:
     st.session_state["user_input"] = ""
     
+# --- Try Asking Panel ---
+SUGGESTIONS = [
+    "Toplam satış nedir?",
+    "En yüksek satış nedir?",
+    "En düşük satış nedir?",
+    "Ortalama satış nedir?",
+    "En çok satış yapan şehir hangisi?",
+    "Aylara göre satış nasıl?",
+    "En iyi satış elemanı kim?"
+]
+
+def show_try_asking_panel():
+    st.markdown("### 💡 Try asking")
+    st.caption("Bir soruya tıkla, otomatik yazsın:")
+
+    cols = st.columns(2)
+
+    for i, suggestion in enumerate(SUGGESTIONS):
+        col = cols[i % 2]
+        if col.button(suggestion, key=f"suggestion_{i}"):
+            st.session_state["user_input"] = suggestion
+            st.rerun()
+            
+if "user_input" not in st.session_state:
+    st.session_state["user_input"] = ""
+    
 st.title("Sales Data Assistant")
 st.write("CSV verisini analiz eden basit soru-cevap uygulaması")
 
