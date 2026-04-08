@@ -110,29 +110,38 @@ if uploaded_file is not None:
 if st.button("Cevapla"):
     if question.strip():
         result = answer_question(df, question)
-        st.markdown("----")
+        st.markdown("---")
         st.markdown("### 📊 Sonuç")
-        if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+
+        if isinstance(result, pd.Series):
             st.markdown("### 📈 Satış Trendi")
             st.line_chart(result)
-        if isinstance(result, (pd.Series, pd.DataFrame)):
             st.dataframe(result)
+
+        elif isinstance(result, pd.DataFrame):
+            st.bar_chart(result)
+            st.dataframe(result)
+
         else:
             st.success(result)
-else:
-    st.warning("Lütfen bir soru yaz.")
+    else:
+        st.warning("Lütfen bir soru yaz.")
         
 #  Auto ask (butonsuz cevap)
-
 if st.session_state.get("auto_ask"):
     result = answer_question(df, st.session_state["user_input"])
-    st.markdown("----")
+    st.markdown("---")
     st.markdown("### 📊 Sonuç")
-    if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+
+    if isinstance(result, pd.Series):
         st.markdown("### 📈 Satış Trendi")
         st.line_chart(result)
-    if isinstance(result, (pd.Series, pd.DataFrame)):
         st.dataframe(result)
+
+    elif isinstance(result, pd.DataFrame):
+        st.bar_chart(result)
+        st.dataframe(result)
+
     else:
         st.success(result)
 
