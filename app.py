@@ -25,6 +25,7 @@ def show_try_asking_panel():
         col = cols[i % 2]
         if col.button(suggestion, key=f"suggestion_{i}"):
             st.session_state["user_input"] = suggestion
+            st.session_state["auto_ask"] = True 
             st.rerun()
             
 if "user_input" not in st.session_state:
@@ -111,5 +112,12 @@ if uploaded_file is not None:
             result = answer_question(df, question)
             st.subheader("Sonuç")
             st.write(result)
-        else:
-            st.warning("Lütfen bir soru yaz.")
+         else:
+        st.warning("Lütfen bir soru yaz.")
+#  Auto ask (butonsuz cevap)
+if st.session_state.get("auto_ask"):
+    result = answer_question(df, st.session_state["user_input"])
+    st.subheader("Sonuç")
+    st.write(result)
+    st.session_state["auto_ask"] = False
+      
