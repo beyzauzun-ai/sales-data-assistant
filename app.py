@@ -111,20 +111,25 @@ if uploaded_file is not None:
             result = answer_question(df, question)
             st.markdown("----")
             st.markdown("### 📊 Sonuç")
-
-            if isinstance(result, pd.Series) or isinstance(result, pd.DataFrame):
+            if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+                st.markdown("### 📈 Satış Trendi")
+                st.line_chart(result)
+            if isinstance(result, (pd.Series, pd.DataFrame)):
                 st.dataframe(result)
             else:
                 st.success(result)
-
         else:
             st.warning("Lütfen bir soru yaz.")
+        
 #  Auto ask (butonsuz cevap)
+
 if st.session_state.get("auto_ask"):
     result = answer_question(df, st.session_state["user_input"])
     st.markdown("----")
     st.markdown("### 📊 Sonuç")
-
+    if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+        st.markdown("### 📈 Satış Trendi")
+        st.line_chart(result)
     if isinstance(result, (pd.Series, pd.DataFrame)):
         st.dataframe(result)
     else:
