@@ -144,7 +144,7 @@ if st.button("Cevapla"):
          st.bar_chart(result)
          st.dataframe(result)
 
-     else:
+    else:
          st.success(result)
 else:
     st.warning("Lütfen bir soru yaz.")
