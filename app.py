@@ -101,7 +101,7 @@ def answer_question(df, question):
             return "Satış elemanı sütunu bulunamadı."
 
     elif "ay" in question:
-    return df.groupby("ay")["toplam_satis"].sum()
+        return df.groupby("ay")["toplam_satis"].sum()
 
 
     elif "şehir" in question or "sehir" in question:
