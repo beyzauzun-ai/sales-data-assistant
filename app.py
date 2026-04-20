@@ -62,14 +62,6 @@ def show_try_asking_panel():
             st.session_state["auto_ask"] = True   
             st.rerun()
 
-if "user_input" not in st.session_state:
-    st.session_state["user_input"] = ""
-
-st.title("Sales Data Assistant")
-st.write("CSV verisini analiz eden basit soru-cevap uygulaması")
-
-uploaded_file = st.file_uploader("CSV dosyası yükle", type=["csv"])
-
 def answer_question(df, question):
     question = question.lower()
     df.columns = df.columns.str.strip().str.lower()
@@ -166,4 +158,4 @@ elif isinstance(result, pd.DataFrame):
 else:
     st.success(result)
 
-    st.session_state["auto_ask"] = False
+st.session_state["auto_ask"] = False
