@@ -166,4 +166,4 @@ elif isinstance(result, pd.DataFrame):
 else:
     st.success(result)
 
-   st.session_state["auto_ask"] = False
+    st.session_state["auto_ask"] = False
