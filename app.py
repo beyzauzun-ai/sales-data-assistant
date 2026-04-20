@@ -123,18 +123,18 @@ if st.button("Cevapla"):
         result = answer_question(df, question)
         st.markdown("---")
         st.markdown("### 📊 Sonuç")
-    if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
-        st.markdown("### 📊 Grafik")   
-        st.markdown("### 📈 Satış Trendi")
-        st.line_chart(result)
-    if isinstance(result, pd.Series):
-       st.markdown("### 📈 Satış Trendi")
-       st.line_chart(result)
-       st.dataframe(result)
+        if "ay" in question and isinstance(result, (pd.Series, pd.DataFrame)):
+            st.markdown("### 📊 Grafik")   
+            st.markdown("### 📈 Satış Trendi")
+            st.line_chart(result)
+        if isinstance(result, pd.Series):
+            st.markdown("### 📈 Satış Trendi")
+            st.line_chart(result)
+            st.dataframe(result)
 
-    elif isinstance(result, pd.DataFrame):
-         st.bar_chart(result)
-         st.dataframe(result)
+        elif isinstance(result, pd.DataFrame):
+            st.bar_chart(result)
+            st.dataframe(result)
 
     else:
          st.success(result)
