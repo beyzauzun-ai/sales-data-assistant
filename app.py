@@ -156,14 +156,14 @@ if st.session_state.get("auto_ask"):
     st.markdown("---")
     st.markdown("### 📊 Sonuç")
    
-   if isinstance(result, pd.Series):
-       st.markdown("### 📊 Grafik")
-       st.line_chart(result)
-       st.dataframe(result)
-   elif isinstance(result, pd.DataFrame):
-        st.bar_chart(result)
-        st.dataframe(result)
-   else:
-       st.success(result)
+if isinstance(result, pd.Series):
+    st.markdown("### 📊 Grafik")
+    st.line_chart(result)
+    st.dataframe(result)
+elif isinstance(result, pd.DataFrame):
+    st.bar_chart(result)
+    st.dataframe(result)
+else:
+    st.success(result)
 
    st.session_state["auto_ask"] = False
